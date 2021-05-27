@@ -1,4 +1,4 @@
-Django Business Rules
+[Experimental] Django Business Rules
 ==============
 
 [![build-status-image]][travis]
