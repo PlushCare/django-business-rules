@@ -17,9 +17,11 @@ class Migration(migrations.Migration):
             name='BusinessRuleModel',
             fields=[
                 ('id', models.AutoField(auto_created=True,
-                                        primary_key=True, serialize=False, verbose_name='ID')),
+                                        primary_key=True, serialize=False,
+                                        verbose_name='ID')),
                 ('name', models.CharField(unique=True,
-                                          verbose_name='name', max_length=150)),
+                                          verbose_name='name',
+                                          max_length=150)),
                 ('description', models.TextField(
                     blank=True, verbose_name='description')),
                 ('rule_data', models.TextField(verbose_name='rule data')),

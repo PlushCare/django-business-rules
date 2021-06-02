@@ -12,7 +12,8 @@ class BusinessRuleModel(models.Model):
     rules = models.TextField(verbose_name=__('rules'), default={})
 
     def get_absolute_url(self):
-        return reverse('django_business_rules:business-rule-form', kwargs={'pk': self.pk})
+        return reverse('django_business_rules:business-rule-form',
+                       kwargs={'pk': self.pk})
 
     def __str__(self):
         return self.name
