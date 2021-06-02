@@ -5,7 +5,8 @@ from django.utils.translation import ugettext_lazy as __
 
 
 class BusinessRuleModel(models.Model):
-    name = models.TextField(unique=True, verbose_name=__('name'))
+    name = models.CharField(
+        unique=True, verbose_name=__('name'), max_length=150)
     description = models.TextField(blank=True, verbose_name=__('description'))
     rule_data = models.TextField(verbose_name=__('rule data'))
     rules = models.TextField(verbose_name=__('rules'), default={})
