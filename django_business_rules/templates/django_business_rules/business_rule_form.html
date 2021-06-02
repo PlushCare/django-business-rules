@@ -18,8 +18,7 @@
 <link rel="stylesheet" href="{% static 'django_business_rules/css/dbr.css' %}" />
 {% endblock %}
 
-{% block branding %} {% blocktrans with rule_name=form.instance.name %}Business Rules: {{ rule_name }} {% endblocktrans
-%} {% endblock %}
+{% block branding %} Business Rules: {{ form.instance.name }} {% endblock %}
 
 {% block breadcrumbs %} <div class="breadcrumbs"></div> {% endblock %}
 
