@@ -18,12 +18,12 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(auto_created=True,
                                         primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(editable=False,
-                                          unique=True, verbose_name='name', max_length=150)),
-                ('description', models.TextField(blank=True,
-                                                 editable=False, verbose_name='description')),
+                ('name', models.CharField(unique=True,
+                                          verbose_name='name', max_length=150)),
+                ('description', models.TextField(
+                    blank=True, verbose_name='description')),
                 ('rule_data', models.TextField(verbose_name='rule data')),
-                ('rules', models.TextField(verbose_name='rules')),
+                ('rules', models.TextField(verbose_name='rules', default={})),
             ],
         ),
     ]
