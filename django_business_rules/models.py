@@ -2,9 +2,10 @@ from django.db import models
 
 from django.urls import reverse
 from django.utils.translation import ugettext_lazy as __
+from django_business_rules.model_mixins import SoftDeleteAbstractMixin
 
 
-class BusinessRuleModel(models.Model):
+class BusinessRuleModel(SoftDeleteAbstractMixin):
     name = models.CharField(
         unique=True, verbose_name=__('name'), max_length=150)
     description = models.TextField(blank=True, verbose_name=__('description'))
